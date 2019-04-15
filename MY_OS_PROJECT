@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<conio.h>
+int main() 
+{ 
+ 
+  int COUNT,j,process,time,remain,flag=0,TIME_QUANTUM; 
+  int WT=0,TARRIVAL_TIME=0,ARRIVAL_TIME[10],BURST_TIME[10],rt[10]; 
+  printf("Enter total number of process:\t "); 
+  scanf("%d",&process); 
+  remain=process; 
+  for(COUNT=0;COUNT<process;COUNT++) 
+  { 
+    printf("Enter Arrival time for process number %d :",COUNT+1);
+    scanf("%d",&ARRIVAL_TIME[COUNT]); 
+     printf("Enter Burst time for process number %d :",COUNT+1);
+    scanf("%d",&BURST_TIME[COUNT]); 
+    rt[COUNT]=BURST_TIME[COUNT]; 
+  } 
