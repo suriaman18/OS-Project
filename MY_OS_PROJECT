@@ -16,3 +16,19 @@ int main()
     scanf("%d",&BURST_TIME[COUNT]); 
     rt[COUNT]=BURST_TIME[COUNT]; 
   } 
+printf("Enter Time Quantum:\t"); 
+  scanf("%d",&TIME_QUANTUM); 
+  printf("\n\nProcess\t|Turnaround Time|Waiting Time\n\n"); 
+  for(time=0,COUNT=0;remain!=0;) 
+  { 
+    if(rt[COUNT]<=TIME_QUANTUM && rt[COUNT]>0) 
+    { 
+      time+=rt[COUNT]; 
+      rt[COUNT]=0; 
+      flag=1; 
+    } 
+    else if(rt[COUNT]>0) 
+    { 
+      rt[COUNT]-=TIME_QUANTUM; 
+      time+=TIME_QUANTUM; 
+    } 
