@@ -32,3 +32,17 @@ printf("Enter Time Quantum:\t");
       rt[COUNT]-=TIME_QUANTUM; 
       time+=TIME_QUANTUM; 
     } 
+    if(rt[COUNT]==0 && flag==1) 
+    { 
+      remain--; 
+      printf("P[%d]\t|\t%d\t|\t%d\n",COUNT+1,time-ARRIVAL_TIME[COUNT],time-ARRIVAL_TIME[COUNT]-BURST_TIME[COUNT]); 
+      WT+=time-ARRIVAL_TIME[COUNT]-BURST_TIME[COUNT]; 
+      TARRIVAL_TIME+=time-ARRIVAL_TIME[COUNT]; 
+      flag=0; 
+    } 
+    if(COUNT==process-1) 
+      COUNT=0; 
+    else if(ARRIVAL_TIME[COUNT+1]<=time) 
+      COUNT++; 
+    else 
+      COUNT=0; 
