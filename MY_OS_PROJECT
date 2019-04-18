@@ -46,3 +46,8 @@ printf("Enter Time Quantum:\t");
       COUNT++; 
     else 
       COUNT=0; 
+      printf("\nAverage Waiting Time= %f\n",WT*1.0/process); 
+  printf("Avg Turnaround Time = %f",TARRIVAL_TIME*1.0/process); 
+  
+  return 0; 
+}
